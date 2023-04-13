@@ -6,7 +6,7 @@ import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 function App() {
   
   //Inicializando la url para que muestre las peliculas recientes con mayor popularidad.
-  const urlDiscover = "https://api.themoviedb.org/3/discover/movie/?api_key=5624fe0a0335053b1f0138f4b72cc6b7&language=es-ES";
+  const urlDiscover = "//api.themoviedb.org/3/discover/movie/?api_key=5624fe0a0335053b1f0138f4b72cc6b7&language=es-ES";
 
   //Declaracion de estados.
   const [movies, setMovies] = useState([]);
@@ -17,7 +17,7 @@ function App() {
   const [playing, setPlaying] = useState(false);
 
   //Inicializando la url para la busqueda de peliculas.
-  const urlSearch = `https://api.themoviedb.org/3/search/movie?api_key=5624fe0a0335053b1f0138f4b72cc6b7&query=${search}&language=es-ES`;
+  const urlSearch = `//api.themoviedb.org/3/search/movie?api_key=5624fe0a0335053b1f0138f4b72cc6b7&query=${search}&language=es-ES`;
 
   //Consulta a la API con fetch.
   const showData = async () => {
@@ -45,7 +45,7 @@ function App() {
   //Consulta a la API nuevamente pero con una nueva url con la id de la pelicula en portada.
   //Guarda los datos de video de la pelicula (para trabajar con el trailer).
   const showDataVideo = async () => {
-    const response = await fetch(`https://api.themoviedb.org/3/movie/${peli.id}?api_key=5624fe0a0335053b1f0138f4b72cc6b7&append_to_response=videos`);
+    const response = await fetch(`//api.themoviedb.org/3/movie/${peli.id}?api_key=5624fe0a0335053b1f0138f4b72cc6b7&append_to_response=videos`);
     const data = await response.json();
     setTrailer(data.videos.results[0]);
   }
@@ -97,7 +97,7 @@ function App() {
   //Nuevamente setea la url para que muestre las peliculas recientes con mayor popularidad
   //pero con la pagina seleccionada.
   const handleDiscover = (id) => {
-    setURL(`https://api.themoviedb.org/3/discover/movie/?api_key=5624fe0a0335053b1f0138f4b72cc6b7&page=${id}&language=es-ES`);
+    setURL(`//api.themoviedb.org/3/discover/movie/?api_key=5624fe0a0335053b1f0138f4b72cc6b7&page=${id}&language=es-ES`);
     window.scrollTo(0,0);
   }
 
