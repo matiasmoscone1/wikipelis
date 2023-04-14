@@ -37,9 +37,14 @@
     /*border: 0.5px solid black;*/
 }
 
+
 .card-img{
     width: 200px;
     height: 350px;    
+}
+
+.card-img{
+    cursor: pointer;
 }
 
 .form-container{
@@ -66,10 +71,18 @@
     gap: 0.5em;
 }
 
+.carrete-container button:hover{
+    cursor: pointer;
+}
+
 .btn-trailer{
     background-color: black;
     border: 1px white solid;
     color: white;
+}
+
+.btn-trailer:hover{
+    cursor: pointer;
 }
 
 /* ************************************************************************************ */
