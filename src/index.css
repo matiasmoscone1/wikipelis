@@ -11,6 +11,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    /*white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;*/
 }
 
 .movie-container{
@@ -154,6 +157,10 @@
     .form-container input{
         width: 50%;
         height: 2em;
+    }
+    .card-img{
+        width: 180px;
+        height: 330px;
     }
 
 }
